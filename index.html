@@ -1,0 +1,111 @@
+<html>
+
+  <head>
+      <link rel = "stylesheet" type = "text/css" href="css.css">
+      <link rel="icon" href="http://www.artfido.com/avatar/8989/1444759704_1341627_profile_picture_display.png">
+      <title> StudyNotes </title>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <meta name="google-signin-client_id" content="760109618003-of1l9b52c7cmqhfnk2tnrk3l7k6jqm1f.apps.googleusercontent.com">
+  </head>
+
+  <body>
+  <div id = "PRELOGIN">
+    <div id = "MenuBar"><h1 class = "title" style="float:left; left:20%; margin:0;"> StudyNote</h1></div>
+
+    <div id = "TopBox">
+
+      <div id = "Positioner1">
+        <h1 class = "title"> Study</h1> <h1 class = "title" id = "typewriter"> Note </h1>
+        <script src= "frontendjs/titleanimation.js"></script>
+        <h2 class = "subtitle"> an online community of note-takers </h2>
+        <br><br>
+        <div id = "buttons">
+          <button class = "btninit">sign up</button>
+          <button class = "btninit" onClick="document.getElementById('loginmodal').style.display='block'">log in</button>
+
+          <div id="loginmodal" class = "modal">
+            <form class="modal-content animate" action="">
+              <span onclick="document.getElementById('loginmodal').style.display='none'" class = "loginmodalclose">x</span>
+
+              <h2 class = "subtitle"> <br><br>Log In </h2>
+              <label>Username    </label><input type = "text" placeholder = "Enter Username" name = "uname" required>
+              <h2 class = "subtitle"><br></h2>
+              <label>Password    </lavel><input type = "password" placeholder = "Enter Password" name = "pwd" required>
+              <h2 class = "subtitle"><br></h2>
+              <button type = "submit" class = "btninit" id ="loginmodalsubmit" >Submit</button>
+              <div id = "divideline"></div>
+              <div id = "gsignin"><div class="g-signin2" data-onsuccess="onSignIn"></div></div>
+              <script>
+                function onSignIn(googleUser) {
+                  var profile = googleUser.getBasicProfile();
+                  console.log(profile.getName());
+                  var name = profile.getName();
+                  document.getElementById("PRELOGIN").style.height = 0;
+                  document.getElementById("USERFRONTPAGE").style.height = auto;
+                  document.getElementById("UsernameReplace").innerHTML = name;
+                }
+              </script>
+            </form>
+          </div>
+          <script>
+            var modal = document.getElementById('loginmodal');
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+
+        </div>
+      </div>
+      <div id = "Positioner2">
+      <img src = "assets/arrow.png" id = "expand" onClick="document.getElementById('InfoBox').scrollIntoView();" >
+      </div>
+    </div>
+
+    <div id = "InfoBox">
+      <h2 class = "description">
+        <i>Welcome.</i> This is a sharing platform for your class notes, helping to get better grades. Give and Take. We rely on our community to maintain a strong database of notes accessible to everyone. Thus, contributions are required.
+      </h2>
+      <h2 class = "leftdescription">
+        <ul>
+          <li>Take Notes anyway you like. </li>
+          <br><br><br><br>
+          <li>Submit notes, make changes. </li>
+          <br><br><br><br>
+          <li>Collaborate on the same docs. </li>
+          <br><br><br><br>
+          <li>Import from a number of sources. </li>
+        </ul>
+      </h2>
+      <div id = "rightdescription">
+        <p class = "ExHeader">John Appleseed<br>Sep 3, 2017<br>NoteShare</p>
+        <br><br><br><br>
+        <p class = "ExTitle"> NoteShare </p>
+        <p class = "ExHeader"> Hello, this is some random text as you might be able to tell at the moment. Why am I typing this text? I don't actually know but why not. Why not you know. Today we are going to be learning about how to really type a bunch of random stuff nobody will actually read like that super long terms of agreement thing to your iPhone. Wow why am I not indenting this code. I don't know. Legend is exodus. <br> <br> -aha </p>
+      </div>
+    </div>
+
+    <div id = "AboutBox">
+      <br><br><br>
+      <h2 class = "subtitle"><i>Web Design by Ed Chen</i></h2>
+    </div>
+  </div>
+
+  <div id = "USERFRONTPAGE">
+    <div id = "TopBox">
+
+      <div id = "Positioner1">
+        <h1 class = "title" id = "UsernameReplace"> Name</h1>
+        <h2 class = "subtitle"> Welcome to the Community </h2>
+        <br><br>
+      </div>
+      <div id = "Positioner2">
+        <img src = "assets/arrow.png" id = "expand">
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

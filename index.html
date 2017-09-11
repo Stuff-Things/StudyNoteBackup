@@ -43,6 +43,9 @@
                   document.getElementById("PRELOGIN").style.height = "0";
                   document.getElementById("USERFRONTPAGE").style.height = "auto";
                   document.getElementById("UsernameReplace").innerHTML = name;
+                  if (name == "Ed Chen") {
+                    document.getElementById("SubtitleReplace").innerHTML = "You need to work on this ._."; 
+                  }
                 }
               </script>
             </form>
@@ -97,7 +100,7 @@
 
       <div id = "Positioner1">
         <h1 class = "title" id = "UsernameReplace"> Name</h1>
-        <h2 class = "subtitle"> Welcome to the Community </h2>
+        <h2 class = "subtitle" id = "SubtitleReplace"> Welcome to the Community </h2>
         <br><br>
         <a href="#" onclick="signOut();">Sign out</a>
         <script>

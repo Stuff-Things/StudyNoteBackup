@@ -280,7 +280,7 @@ button.btninit {
 }
 
 #AboutBox {
-  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark-triangles.png') fixed repeat 0 0;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark-triangles.png') fixed repeat 0 0; 
   width: 100%;
   margin: 0;
   padding: 0;

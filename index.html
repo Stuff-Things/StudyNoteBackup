@@ -99,6 +99,15 @@
         <h1 class = "title" id = "UsernameReplace"> Name</h1>
         <h2 class = "subtitle"> Welcome to the Community </h2>
         <br><br>
+        <a href="#" onclick="signOut();">Sign out</a>
+        <script>
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              console.log('User signed out.');
+            });
+          }
+        </script>
       </div>
       <div id = "Positioner2">
         <img src = "assets/arrow.png" id = "expand">

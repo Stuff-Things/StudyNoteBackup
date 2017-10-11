@@ -10,7 +10,7 @@
 
   <body>
   <div id = "PRELOGIN">
-    <div id = "MenuBar"><h1 class = "title" style="float:left; left:20%; margin:0;"> StudyNote</h1></div>
+    <div id = "MenuBar"><br><h1 class = "title" style="font-size:2em; margin:2%; margin-top: 0.75%;">StudyNote</h1></div>
 
     <div id = "TopBox">
 
@@ -18,23 +18,25 @@
         <h1 class = "title"> Study</h1> <h1 class = "title" id = "typewriter"> Note </h1>
         <script src= "frontendjs/titleanimation.js"></script>
         <h2 class = "subtitle"> an online community of note-takers </h2>
-        <br><br>
-        <div id = "buttons">
-          <button class = "btninit">sign up</button>
-          <button class = "btninit" onClick="document.getElementById('loginmodal').style.display='block'">log in</button>
+        <div style = "width: 100%; border-bottom: 2px solid lightgrey;"></div>
+        <div id = "buttons" style = "margin-top:2%;">
+          <button class = "btninit">Get Started</button>
+          <button class = "btninit" onClick="document.getElementById('loginmodal').style.display='block'">Login</button>
 
           <div id="loginmodal" class = "modal">
             <form class="modal-content animate" action="">
               <span onclick="document.getElementById('loginmodal').style.display='none'" class = "loginmodalclose">x</span>
 
-              <h2 class = "subtitle"> <br><br>Log In </h2>
+              <h2 class = "subtitle"> <br><br>Login</h2>
               <label>Username    </label><input type = "text" placeholder = "Enter Username" name = "uname" required>
               <h2 class = "subtitle"><br></h2>
               <label>Password    </lavel><input type = "password" placeholder = "Enter Password" name = "pwd" required>
-              <h2 class = "subtitle"><br></h2>
-              <button type = "submit" class = "btninit" id ="loginmodalsubmit" >Submit</button>
-              <div id = "divideline"></div>
-              <div id = "gsignin"><div class="g-signin2" data-onsuccess="onSignIn"></div></div>
+              <h2 class = "subtitle"><br><br><br></h2>
+              <div style = "margin-top: 1em;">
+                <button type = "submit" class = "btninit" id ="loginmodalsubmit" style = "position: relative; top: 0px;">Submit</button>
+                <div id = "divideline"></div>
+                <div id = "gsignin"><div class="g-signin2" data-onsuccess="onSignIn"></div></div>
+              </div>
               <script>
                 function onSignIn(googleUser) {
                   var profile = googleUser.getBasicProfile();
@@ -82,16 +84,15 @@
         </ul>
       </h2>
       <div id = "rightdescription">
-        <p class = "ExHeader">John Appleseed<br>Sep 3, 2017<br>NoteShare</p>
-        <br><br><br><br>
-        <p class = "ExTitle"> NoteShare </p>
-        <p class = "ExHeader"> Hello, this is some random text as you might be able to tell at the moment. Why am I typing this text? I don't actually know but why not. Why not you know. Today we are going to be learning about how to really type a bunch of random stuff nobody will actually read like that super long terms of agreement thing to your iPhone. Wow why am I not indenting this code. I don't know. Legend is exodus. <br> <br> -aha </p>
+        <p class = "ExHeader">John Appleseed<br>Sep 3, 2017<br>NoteShare<br><br>
+                              
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br> <br> -John </p>
       </div>
     </div>
 
     <div id = "AboutBox">
       <br><br><br>
-      <h2 class = "subtitle"><i>Web Design by Ed Chen</i></h2>
+      <div style="margin-right: 20%; margin-left: 20%; position: relative;"><h2 style="text-align:center; padding-top: 2%; border-top: 2px solid lightgrey;" >Web Design by Ed Chen</h2></div>
     </div>
   </div>
 
